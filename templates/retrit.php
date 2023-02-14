@@ -8,7 +8,7 @@ Template Name: Ретрит
     <h1 class="visually-hidden">РЕТРИТ - БОЛЬШЕ, ЧЕМ ПРОСТО ОТДЫХ</h1>
     <section class="video">
         <div class="container">
-            <h2>Что такое ретрит?</h2>
+            <h2 class="title-center">Что такое ретрит?</h2>
             <div class="video__wrapper">
                 <div class="video__video-item">
                     <video controls>
@@ -32,7 +32,7 @@ Template Name: Ретрит
 
     <section class="place">
         <div class="container">
-            <h2 class="place__title">Место проведения</h2>
+            <h2 class="place__title title-center">Место проведения</h2>
             <p class="place__text">Мы будем жить на берегу моря в тихом и уединенном поселке Андреевка, недалеко от
                 Севастополя. В шаговой доступности прекрасные дикие и общественный пляжи, песчаные скалы, живописный мыс
                 Лукулл, благоухающий тенистый парк, маковые поля, дикий миндаль и виноградники.
@@ -118,7 +118,7 @@ Template Name: Ретрит
 
     <section class="program _tabs">
         <div class="container">
-            <h2>Программа тура</h2>
+            <h2 class="title-center">Программа тура</h2>
             <div class="program__wrapper _tabs">
                 <nav class="program__nav">
                     <button class="program__btn _tabs-item _active">День 1</button>
@@ -191,7 +191,7 @@ Template Name: Ретрит
 
     <section class="video-review">
         <div class="container">
-            <h2>Что говорят о ретрите участники</h2>
+            <h2 class="title-center">Что говорят о ретрите участники</h2>
             <div class="video-review__wrapper swiper">
                 <ul class="video-review__list swiper-wrapper">
                     <li class="video-review__item swiper-slide">
@@ -216,6 +216,48 @@ Template Name: Ретрит
             </div>
             <div class="swiper-button-prev video-review-prev"></div>
             <div class="swiper-button-next video-review-next"></div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 class="title-center">Часто задаваемые вопросы</h2>
+            <div class="faq__wrapper _tabs">
+                <ul class="faq__list">
+                    <li class="faq__item _tabs-accordion">
+                        <button class="faq__btn _tabs-button">Как забронировать время?</button>
+                        <div class="faq__content _tabs-content">
+                            <p>Что бы забронировать время нужно отправить заявку на проведение ретрита, и, после
+                                согласования программы, внести предоплату в размере 50%. В случае отсутствия
+                                авиасообщения или иного форс-мажора, предоплата полностью возвращается.</p>
+                        </div>
+                    </li>
+                    <li class="faq__item _tabs-accordion">
+                        <button class="faq__btn _tabs-button">Возможно ли проживание с животным?</button>
+                        <div class="faq__content _tabs-content">
+                            <p>Что бы забронировать время нужно отправить заявку на проведение ретрита, и, после
+                                согласования программы, внести предоплату в размере 50%. В случае отсутствия
+                                авиасообщения или иного форс-мажора, предоплата полностью возвращается.</p>
+                        </div>
+                    </li>
+                    <li class="faq__item _tabs-accordion">
+                        <button class="faq__btn _tabs-button">Есть ли питание для вегетарианцев?</button>
+                        <div class="faq__content _tabs-content">
+                            <p>Что бы забронировать время нужно отправить заявку на проведение ретрита, и, после
+                                согласования программы, внести предоплату в размере 50%. В случае отсутствия
+                                авиасообщения или иного форс-мажора, предоплата полностью возвращается.</p>
+                        </div>
+                    </li>
+                    <li class="faq__item _tabs-accordion">
+                        <button class="faq__btn _tabs-button">Противоречат ли занятия моей вере?</button>
+                        <div class="faq__content _tabs-content">
+                            <p>Что бы забронировать время нужно отправить заявку на проведение ретрита, и, после
+                                согласования программы, внести предоплату в размере 50%. В случае отсутствия
+                                авиасообщения или иного форс-мажора, предоплата полностью возвращается.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
