@@ -261,6 +261,90 @@ Template Name: Ретрит
         </div>
     </section>
 
+    <section class="previously">
+        <div class="container">
+            <h2 class="title-center">Как это было в прошлый раз</h2>
+        </div>
+        <div class="previously__wrapper previously-slider swiper">
+            <ul class="previously__list swiper-wrapper single-gallery">
+                <li class="swiper-slide">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+            <div class="swiper-pagination previously__pagination"></div>
+        </div>
+
+    </section>
+
     <section class="form">
         <h2><?= CFS()->get('form_title') ?></h2>
         <div class="container">

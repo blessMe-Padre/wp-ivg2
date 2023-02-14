@@ -111,6 +111,49 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     });
 
+    const swiperPreviously = new Swiper('.previously-slider', {
+        loop: true,
+        spaceBetween: 40,
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            // when window width is >= 640px
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 40
+            },
+
+            1023: {
+                slidesPerView: 4,
+                spaceBetween: 40
+            },
+
+            1680: {
+                slidesPerView: 5,
+                spaceBetween: 40
+            }
+
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: 'true'
+        },
+
+    });
+
+
+
 
     let elem = document.querySelector('.main-articles__list');
     if (elem) {
