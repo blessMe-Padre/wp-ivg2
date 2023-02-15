@@ -153,8 +153,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-
+    // Masonry
     let elem = document.querySelector('.main-articles__list');
     if (elem) {
         let msnry = new Masonry(elem, {
@@ -164,6 +163,8 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    // baguetteBox
     if (gallery) {
         baguetteBox.run('.gallery');
     }
@@ -217,5 +218,20 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // animations
 
+    function onEntry(entry) {
+        entry.forEach(change => {
+            if (change.isIntersecting) {
+                change.target.classList.add('_element-show');
+            }
+        });
+    }
+
+    let observer = new IntersectionObserver(onEntry, { threshold: [0.2] });
+    let animElements = document.querySelectorAll('._element-animation');
+
+    for (let element of animElements) {
+        observer.observe(element);
+    }
 });

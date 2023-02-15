@@ -116,7 +116,7 @@ Template Name: Ретрит
 
     </section>
 
-    <section class="program _tabs">
+    <section class="program _tabs _hide _element-animation">
         <div class="container">
             <h2 class="title-center">Программа тура</h2>
             <div class="program__wrapper _tabs">
@@ -189,7 +189,7 @@ Template Name: Ретрит
         </div>
     </section>
 
-    <section class="video-review">
+    <section class="video-review _hide _element-animation">
         <div class="container">
             <h2 class="title-center">Что говорят о ретрите участники</h2>
             <div class="video-review__wrapper swiper">
@@ -219,7 +219,7 @@ Template Name: Ретрит
         </div>
     </section>
 
-    <section class="faq">
+    <section class="faq _hide _element-animation">
         <div class="container">
             <h2 class="title-center">Часто задаваемые вопросы</h2>
             <div class="faq__wrapper _tabs">
@@ -261,7 +261,7 @@ Template Name: Ретрит
         </div>
     </section>
 
-    <section class="previously">
+    <section class="previously _hide _element-animation">
         <div class="container">
             <h2 class="title-center">Как это было в прошлый раз</h2>
         </div>

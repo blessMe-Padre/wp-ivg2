@@ -163,6 +163,19 @@ img {
     object-fit: cover;
 }
 
+/* Animation */
+
+._hide {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.3s ease-in;
+}
+
+._hide._element-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* header start */
 
 .header {
