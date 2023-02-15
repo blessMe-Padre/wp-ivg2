@@ -179,22 +179,25 @@ window.addEventListener('DOMContentLoaded', () => {
     const accordions = document.querySelectorAll("._tabs-accordion");
 
     accordions.forEach(el => {
-        el.addEventListener('click', (evt) => {
-            evt.preventDefault();
-            const target = evt.currentTarget;
-            const button = target.querySelector('._tabs-button');
-            const content = target.querySelector('._tabs-content');
+        const button = el.querySelector('._tabs-button');
+        const content = el.querySelector('._tabs-content');
 
-            button.classList.toggle('_active');
+        button.addEventListener('click', (evt) => {
+            evt.preventDefault();
+            const currentButton = evt.currentTarget;
+
+            currentButton.classList.toggle('_active');
             content.classList.toggle('_active');
 
-            if (button.classList.contains('_active')) {
+            if (currentButton.classList.contains('_active')) {
                 content.style.maxHeight = content.scrollHeight + 'px';
             } else {
                 content.style.maxHeight = null;
             }
+
         });
     });
+
 
     const tabButtons = document.querySelectorAll("._tabs-item");
     const tabs_blocks = document.querySelectorAll("._tabs-block");

@@ -153,7 +153,7 @@ Template Name: Ретрит
                 <div class="program__nav">
                     <div class="_tabs-accordion">
                         <button class="program__btn _tabs-button _active">День 1</button>
-                        <div class="_tabs-content _active" style="max-height: 70px;">
+                        <div class="_tabs-content _active" style="max-height: 100px;">
                             <ul>
                                 <li>1:30 — Прибытие утренним рейсом, трансфер в отель</li>
                                 <li>3:00 — Обед, знакомство, расселение</li>
