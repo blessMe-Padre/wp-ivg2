@@ -176,7 +176,6 @@ window.addEventListener('DOMContentLoaded', () => {
     baguetteBox.run('.single-gallery');
 
     //Tabs
-    const tabs = document.querySelectorAll("._tabs");
     const accordions = document.querySelectorAll("._tabs-accordion");
 
     accordions.forEach(el => {
@@ -197,26 +196,30 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    for (let index = 0; index < tabs.length; index++) {
-        let tab = tabs[index];
-        let tabs_items = tab.querySelectorAll("._tabs-item");
-        let tabs_blocks = tab.querySelectorAll("._tabs-block");
-        for (let index = 0; index < tabs_items.length; index++) {
-            let tabs_item = tabs_items[index];
-            tabs_item.addEventListener("click", function (e) {
-                for (let index = 0; index < tabs_items.length; index++) {
-                    let tabs_item = tabs_items[index];
-                    tabs_item.classList.remove('_active');
-                    tabs_blocks[index].classList.remove('_active');
-                    tabs_blocks[index].style.maxHeight = null;
-                }
-                tabs_item.classList.add('_active');
-                tabs_blocks[index].classList.add('_active');
-                tabs_blocks[index].style.maxHeight = tabs_blocks.scrollHeight + 'px';
-                e.preventDefault();
-            });
-        }
-    }
+    const tabButtons = document.querySelectorAll("._tabs-item");
+    const tabs_blocks = document.querySelectorAll("._tabs-block");
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', (evt) => {
+            evt.preventDefault();
+            const targetBtn = evt.currentTarget;
+            const targetBtnId = targetBtn.getAttribute('data-tab');
+            const currentTab = document.querySelector(targetBtnId);
+
+            if (!targetBtn.classList.contains('_active')) {
+                tabButtons.forEach(button => {
+                    button.classList.remove('_active');
+                });
+
+                tabs_blocks.forEach(button => {
+                    button.classList.remove('_active');
+                });
+
+                targetBtn.classList.add('_active');
+                currentTab.classList.add('_active');
+            }
+        });
+    })
 
     // animations
 

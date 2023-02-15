@@ -121,18 +121,18 @@ Template Name: Ретрит
             <h2 class="title-center">Программа тура</h2>
             <div class="program__wrapper _tabs">
                 <nav class="program__nav">
-                    <button class="program__btn _tabs-item _active">День 1</button>
-                    <button class="program__btn _tabs-item">День 2</button>
-                    <button class="program__btn _tabs-item">День 3</button>
+                    <button class="program__btn _tabs-item _active" data-tab="#tab1">День 1</button>
+                    <button class="program__btn _tabs-item" data-tab="#tab2">День 2</button>
+                    <button class="program__btn _tabs-item" data-tab="#tab3">День 3</button>
                 </nav>
 
-                <div class="_tabs-block _active">
+                <div class="_tabs-block _active" id="tab1">
                     <ul>
                         <li>1:30 — Прибытие утренним рейсом, трансфер в отель</li>
                         <li>3:00 — Обед, знакомство, расселение</li>
                     </ul>
                 </div>
-                <div class="_tabs-block">
+                <div class="_tabs-block" id="tab2">
                     <ul>
                         <li>8:00 — Утренняя медитация</li>
                         <li>9:00 — Завершение 4-х дневной программы. Выезд из отеля</li>
@@ -141,7 +141,7 @@ Template Name: Ретрит
                         <li>9:00 — Завершение 4-х дневной программы. Выезд из отеля</li>
                     </ul>
                 </div>
-                <div class="_tabs-block">
+                <div class="_tabs-block" id="tab3">
                     <ul>
                         <li>Утренняя сессия: йога-техники снятия усталости и восстановления сил</li>
                         <li>9:00 — Завершение 4-х дневной программы. Выезд из отеля</li>
