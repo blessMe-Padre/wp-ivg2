@@ -60,7 +60,7 @@ Template Name: Главная страница
 
     <section class="video">
         <div class="container">
-            <h2>Видео обо мне</h2>
+            <h2 class="title-center">Видео обо мне</h2>
             <div class="video__wrapper">
                 <div class="video__video-item">
                     <video poster="<?php echo get_template_directory_uri() ?>/assets/video/poster.jpg" controls>
@@ -87,7 +87,7 @@ Template Name: Главная страница
 
     <section class="online _hide _element-animation">
         <div class="container">
-            <h2>Онлайн курс</h2>
+            <h2 class="title-center">Онлайн курс</h2>
             <ul class="online__list">
                 <li class="online__item">
                     <div class="online__item-wrapper">
@@ -159,7 +159,7 @@ Template Name: Главная страница
 
     <section class="training _hide _element-animation">
         <div class="container">
-            <h2>Тренинги</h2>
+            <h2 class="title-center">Тренинги</h2>
             <p>Тренинги рассчитаны на 2 дня, время проведения с 10.00 до 18.00, количество участников 10-15
                 человек.</p>
             <div class="swiper-button-prev"></div>
@@ -202,7 +202,7 @@ Template Name: Главная страница
 
     <section class="main-articles _hide _element-animation">
         <div class="container">
-            <h2>Статьи</h2>
+            <h2 class="title-center">Статьи</h2>
             <div class="main-articles__wrapper">
                 <ul class="main-articles__list">
                     <?php

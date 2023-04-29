@@ -30,7 +30,7 @@ Template Name: Ретрит
         </div>
     </section>
 
-    <section class="place">
+    <section class="place _element-animation">
         <div class="container">
             <h2 class="place__title title-center">Место проведения</h2>
             <p class="place__text">Мы будем жить на берегу моря в тихом и уединенном поселке Андреевка, недалеко от

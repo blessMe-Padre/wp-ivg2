@@ -7,15 +7,15 @@ Template Name: Тренинги
 <main>
     <section class="descriptions">
         <div class="container">
-            <h1><?php the_title(); ?></h1>
+            <h1 class="title-center"><?php the_title(); ?></h1>
             <?php the_content(); ?>
         </div>
     </section>
-    <section class="gallery-block">
+    <section class="gallery-block _hide _element-animation">
         <div class="container">
             <h2 class="visually-hidden">Галерея</h2>
             <ul class="gallery-block__list gallery">
-            <?php $loop = CFS()->get('training');
+                <?php $loop = CFS()->get('training');
                 foreach ($loop as $row ) {
             ?>
                 <li class="gallery-block__item">
@@ -23,20 +23,20 @@ Template Name: Тренинги
                         <img src="<?= $row['training_img'] ?>" alt="<?= $row['	training_description'] ?>">
                     </a>
                 </li>
-            <?php
+                <?php
                 }
             ?>
             </ul>
         </div>
     </section>
-    <section class="training">
+    <section class="training _hide _element-animation">
         <div class="container">
             <h3>Список Тренингов</h2>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
                 <div class="training__wrapper swiper">
                     <ul class="swiper-wrapper">
-                    <?php
+                        <?php
                             $my_posts = get_posts( array(
                             'numberposts' => -1,
                                 'category' => 4,
@@ -50,21 +50,22 @@ Template Name: Тренинги
                                 setup_postdata( $post );
                             ?>
 
-                            <li class="swiper-slide">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail( '' );  ?>
-                                    <h3><?php the_title(); ?></h3>
-                                    <p class="training__when">
-                                        Ближайший тренинг: <time datetime="<?= CFS()->get('training_when_robots') ?>"><?= CFS()->get('training_when') ?></time>
-                                    </p>
-                                    <p class="training__description"><?= CFS()->get('training__descriptions') ?></p>
-                                </a>
-                            </li>
-                            <?php
+                        <li class="swiper-slide">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail( '' );  ?>
+                                <h3><?php the_title(); ?></h3>
+                                <p class="training__when">
+                                    Ближайший тренинг: <time
+                                        datetime="<?= CFS()->get('training_when_robots') ?>"><?= CFS()->get('training_when') ?></time>
+                                </p>
+                                <p class="training__description"><?= CFS()->get('training__descriptions') ?></p>
+                            </a>
+                        </li>
+                        <?php
                                 }
                             wp_reset_postdata();
                         ?>
-                        </ul>
+                    </ul>
                     </ul>
                 </div>
         </div>

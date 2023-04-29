@@ -7,11 +7,11 @@ Template Name: Услуги
 <main>
     <div class="container">
         <section class="services">
-            <h1>Услуги</h1>
-            <h2><?= CFS()->get('services_title') ?></h2>
+            <h1 class="title-center">Услуги</h1>
+            <h2 class="mb-30"><?= CFS()->get('services_title') ?></h2>
             <p><?= CFS()->get('services_text') ?></p>
             <ul class="services__list">
-            <?php
+                <?php
                 $my_posts = get_posts( array(
                     'numberposts' => -1,
                         'category' => 4,
@@ -32,14 +32,14 @@ Template Name: Услуги
                         <p><?php the_title(); ?></p>
                     </a>
                 </li>
-            <?php
+                <?php
                 }
                 wp_reset_postdata();
             ?>
             </ul>
 
             <ul class="services__list-lessons">
-            <?php
+                <?php
                 $my_posts = get_posts( array(
                     'numberposts' => -1,
                         'category' => 3,
@@ -52,7 +52,7 @@ Template Name: Услуги
                 foreach( $my_posts as $post ){
                     setup_postdata( $post );
                 ?>
-                <li class="item-lessons">
+                <li class="item-lessons _hide _element-animation">
                     <div class="item-lessons__img">
                         <?php the_post_thumbnail( '' );  ?>
                     </div>
@@ -64,7 +64,7 @@ Template Name: Услуги
                         <a href="<?php the_permalink(); ?>" class="link">читать далее >></a>
                     </div>
                 </li>
-            <?php
+                <?php
                 }
                 wp_reset_postdata();
             ?>

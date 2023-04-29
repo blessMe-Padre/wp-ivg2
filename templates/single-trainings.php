@@ -8,7 +8,7 @@ Template Post Type: post
 <main>
     <section class="descriptions">
         <div class="container">
-            <h1><?php the_title(); ?></h1>
+            <h1 class="title-center"><?php the_title(); ?></h1>
             <?php the_post_thumbnail( '' );  ?>
             <?php the_content(); ?>
         </div>
@@ -21,7 +21,7 @@ Template Post Type: post
     </div>
     <section class="why">
         <div class="container">
-            <h2><?= CFS()->get('why_title') ?></h2>
+            <h2 class="title-center"><?= CFS()->get('why_title') ?></h2>
             <ul class="why__list">
                 <li class="why__item">
                     <img src="<?= CFS()->get('why_card_1_img') ?>" alt="">

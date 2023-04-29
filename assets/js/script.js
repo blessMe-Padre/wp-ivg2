@@ -173,9 +173,7 @@ window.addEventListener('DOMContentLoaded', () => {
         baguetteBox.run('.single-gallery');
     }
 
-    baguetteBox.run('.single-gallery');
-
-    //Tabs
+    //accordions
     const accordions = document.querySelectorAll("._tabs-accordion");
 
     accordions.forEach(el => {
@@ -198,7 +196,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
+    //Tabs
     const tabButtons = document.querySelectorAll("._tabs-item");
     const tabs_blocks = document.querySelectorAll("._tabs-block");
 

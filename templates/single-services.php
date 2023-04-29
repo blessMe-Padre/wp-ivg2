@@ -8,7 +8,7 @@ Template Post Type: post
 <main>
     <section class="descriptions">
         <div class="container">
-            <h1><?php the_title(); ?></h1>
+            <h1 class="title-center"><?php the_title(); ?></h1>
             <?php the_post_thumbnail( '' );  ?>
             <?php the_content(); ?>
         </div>
@@ -22,7 +22,7 @@ Template Post Type: post
         <div class="container">
             <h2 class="visually-hidden">Галерея</h2>
             <ul class="gallery-block__list single-gallery">
-            <?php $loop = CFS()->get('gallery');
+                <?php $loop = CFS()->get('gallery');
                 foreach ($loop as $row ) {
             ?>
                 <li class="gallery-block__item">
@@ -30,7 +30,7 @@ Template Post Type: post
                         <img src="<?= $row['gallery_photo'] ?>" alt="<?= $row['gallery_description'] ?>">
                     </a>
                 </li>
-            <?php
+                <?php
                 }
             ?>
             </ul>

@@ -4,10 +4,10 @@
 <main>
     <section class="articles">
         <div class="container">
-            <h1>Статьи</h1>
+            <h1 class="title-center">Статьи</h1>
             <div class="articles__wrapper">
                 <ul class="articles__list">
-                <?php
+                    <?php
 			if(have_posts()) {
 				while (have_posts()) {
 					the_post();
@@ -29,20 +29,20 @@
                             <a href="<?php the_permalink(); ?>" class="link">читать далее >></a>
                         </div>
                     </li>
-					<?php
+                    <?php
 				}
 			}
 			?>
-            <?php the_posts_pagination(); ?>
+                    <?php the_posts_pagination(); ?>
                 </ul>
                 <div id="articles">
-                <div class="input-wrapper">
-                    <input class="search input input--search" type="text" placeholder="Поиск">
-                    <i class="icon-search"></i>
-                </div>
+                    <div class="input-wrapper">
+                        <input class="search input input--search" type="text" placeholder="Поиск">
+                        <i class="icon-search"></i>
+                    </div>
                     <h4>Статьи на сайте</h4>
                     <ul class="main-articles-list-search list">
-                    <?php
+                        <?php
                                 $my_posts = get_posts( array(
                                     'numberposts' => -1,
                                         'category' => 5,
@@ -55,10 +55,10 @@
                                 foreach( $my_posts as $post ){
                                     setup_postdata( $post );
                                 ?>
-                                <li class="main-articles-item-search">
-                                    <a class="link article-single" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </li>
-                            <?php
+                        <li class="main-articles-item-search">
+                            <a class="link article-single" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </li>
+                        <?php
                                 }
                                 wp_reset_postdata();
                             ?>
@@ -79,7 +79,7 @@
                             );
                                 wp_list_categories($args);
                         ?>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
