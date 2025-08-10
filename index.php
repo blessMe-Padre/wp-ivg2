@@ -58,33 +58,6 @@ Template Name: Главная страница
         </div>
     </section>
 
-    <!-- <section class="video">
-        <div class="container">
-            <h2 class="title-center">Видео обо мне</h2>
-            <div class="video__wrapper">
-                <div class="video__video-item">
-                    <video poster="<?php echo get_template_directory_uri() ?>/assets/video/poster.jpg" controls>
-                        <source type="video/webm"
-                            src="<?php echo get_template_directory_uri() ?>/assets/video/intro.webm">
-                        <source type="video/mp4"
-                            src="<?php echo get_template_directory_uri() ?>/assets/video/intro.mp4">
-                    </video>
-                </div>
-                <div class="video__item">
-                    <p class="about__item-text">
-                        Многие люди привыкли думать, что роль психолога состоит исключительно в том, чтобы помогать
-                        людям преодолевать жизненные трудности. Однако это не так – на мой взгляд, роль психолога
-                        состоит в том, чтобы дать практические советы и научить человека быть счастливее. Тогда
-                        жизненных трудностей станет намного меньше, ведь испытания уже не будут казаться такими
-                        сложными.
-                    </p>
-                    <p> То, что Вы попали на эту страницу, скорее всего, значит, что Вы находитесь в духовных поисках, а
-                        значит – Истина остается в приоритете!</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="online _hide _element-animation">
         <div class="container">
             <h2 class="title-center">Онлайн курс</h2>
