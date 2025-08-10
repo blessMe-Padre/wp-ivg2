@@ -1,5 +1,5 @@
 <?php
-$version = '1.1.1';
+$version = '1.1.2';
  // правильный способ подключить стили и скрипты темы
  add_action( 'wp_enqueue_scripts', 'theme_add_scripts' );
 
@@ -56,8 +56,16 @@ add_theme_support( 'post-thumbnails', array('post'));
         '/assets/js/swiper-bundle.min.js', false, null, 'footer' );
 
     // подключаем основной script.js файл
-    wp_enqueue_script( '', get_template_directory_uri() .
-    '/assets/js/script.js', false, null, 'footer' );
+    // wp_enqueue_script( '', get_template_directory_uri() .
+    // '/assets/js/script.js', false, null, 'footer' );
+    // Подключаем основной script.js файл
+    wp_enqueue_script(
+        'main-script', // Обязательный уникальный идентификатор
+        get_template_directory_uri() . '/assets/js/script.js',
+        array(), // Зависимости (false заменяем на пустой массив)
+        $version, // Передаем переменную с версией
+        true // 'footer' заменяем на true для вывода в подвале
+    );
 }
 
 function add_menu() {
