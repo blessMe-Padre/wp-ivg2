@@ -1,4 +1,5 @@
 <?php
+$version = '1.1.1';
  // правильный способ подключить стили и скрипты темы
  add_action( 'wp_enqueue_scripts', 'theme_add_scripts' );
 
@@ -16,6 +17,7 @@ add_theme_support( 'post-thumbnails', array('post'));
 
 
  function theme_add_scripts() {
+    global $version;
     // подключаем файл baguetteBox.css
     wp_enqueue_style( 'baguetteBox-css', get_template_directory_uri() . '/assets/css/baguetteBox.min.css');
 
@@ -32,7 +34,7 @@ add_theme_support( 'post-thumbnails', array('post'));
     wp_enqueue_style( 'swiper-bundle', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css');
 
     // подключаем основной файл стилей темы
-    wp_enqueue_style( 'style', get_stylesheet_uri());
+    wp_enqueue_style( 'style', get_stylesheet_uri(), array(), $version);
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
