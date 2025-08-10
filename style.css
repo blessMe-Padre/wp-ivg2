@@ -1902,3 +1902,36 @@ input.submit-btn:hover {
 }
 
 /* footer end  */
+
+
+.training_list {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    max-width: 860px;
+}
+
+.training_list__item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.training_list__item:nth-child(even) {
+   flex-direction: row-reverse;
+}
+
+.training_list__item video {
+    max-height: 500px;
+}
+.training_list__item p {
+    max-width: 500px;
+}
+@media (max-width: 560px) {
+    .training_list__item {
+        flex-direction: column;
+    }
+    .training_list__item:nth-child(even) {
+    flex-direction: column;
+    }
+}
