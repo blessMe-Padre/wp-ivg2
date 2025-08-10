@@ -58,7 +58,7 @@ Template Name: Главная страница
         </div>
     </section>
 
-    <section class="video">
+    <!-- <section class="video">
         <div class="container">
             <h2 class="title-center">Видео обо мне</h2>
             <div class="video__wrapper">
@@ -83,7 +83,7 @@ Template Name: Главная страница
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="online _hide _element-animation">
         <div class="container">
