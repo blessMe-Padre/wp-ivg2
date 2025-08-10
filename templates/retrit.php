@@ -10,12 +10,12 @@ Template Name: Ретрит
         <div class="container">
             <h2 class="title-center">Что такое ретрит?</h2>
             <div class="video__wrapper">
-                <div class="video__video-item">
+                <!-- <div class="video__video-item">
                     <video controls>
                         <source type="video/mp4"
                             src="<?php echo get_template_directory_uri() ?>/assets/video/video-2.mp4">
                     </video>
-                </div>
+                </div> -->
                 <div class="video__item">
                     <p class="about__item-text">
                         Слово ретрит — от английского retreat, означает уединенный отдых в тихом месте, где можно
@@ -343,16 +343,6 @@ Template Name: Ретрит
             <div class="swiper-pagination previously__pagination"></div>
         </div>
 
-    </section>
-
-    <section class="form">
-        <h2><?= CFS()->get('form_title') ?></h2>
-        <div class="container">
-            <div class="form__wrapper">
-                <?= do_shortcode( CFS()->get('form_shortcode')); ?>
-                <p>* Ваши личные данные будут надежно защищены</p>
-            </div>
-        </div>
     </section>
 </main>
 
