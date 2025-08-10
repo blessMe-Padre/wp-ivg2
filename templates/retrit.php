@@ -10,12 +10,12 @@ Template Name: Ретрит
         <div class="container">
             <h2 class="title-center">Что такое ретрит?</h2>
             <div class="video__wrapper">
-                <!-- <div class="video__video-item">
+                <div class="video__video-item">
                     <video controls>
                         <source type="video/mp4"
                             src="<?php echo get_template_directory_uri() ?>/assets/video/video-2.mp4">
                     </video>
-                </div> -->
+                </div>
                 <div class="video__item">
                     <p class="about__item-text">
                         Слово ретрит — от английского retreat, означает уединенный отдых в тихом месте, где можно
@@ -39,78 +39,21 @@ Template Name: Ретрит
             <p>
 
             <ul class="place__list single-gallery">
-                <li class="place__item">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
+                <?php
+                $photos = get_field('место_проведения_галерея');
 
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="place__item">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-2.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-2.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="place__item">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-3.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-3.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="place__item">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-4.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-4.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="place__item">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-5.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-5.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="place__item">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-6.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-6.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
+                if ($photos) {
+                    foreach ($photos as $photo) {
+                        echo '<li class="place__item">';
+                            echo '<a href="'. esc_url($photo) .'">';
+                                echo '<img src="'. esc_url($photo) .'" alt="auto">';
+                            echo '</a>';
+                        echo '</li>';
+                    }
+                } else {
+                    echo 'No photos found2.';
+                }
+                ?>
             </ul>
         </div>
 
@@ -194,24 +137,14 @@ Template Name: Ретрит
             <h2 class="title-center">Что говорят о ретрите участники</h2>
             <div class="video-review__wrapper swiper">
                 <ul class="video-review__list swiper-wrapper">
+                    <?php while (have_rows("видео_отзыв")):
+                        the_row(); ?>
                     <li class="video-review__item swiper-slide">
                         <video class="video-item" controls>
-                            <source type="video/mp4"
-                                src="<?php echo get_template_directory_uri() ?>/assets/video/video-review-1.mp4">
+                            <source src="<?php the_sub_field("отзыв") ?>" type="video/mp4">
                         </video>
                     </li>
-                    <li class="video-review__item swiper-slide">
-                        <video class="video-item" controls>
-                            <source type="video/mp4"
-                                src="<?php echo get_template_directory_uri() ?>/assets/video/video-review-2.mp4">
-                        </video>
-                    </li>
-                    <li class="video-review__item swiper-slide">
-                        <video class="video-item" controls>
-                            <source type="video/mp4"
-                                src="<?php echo get_template_directory_uri() ?>/assets/video/video-review-3.mp4">
-                        </video>
-                    </li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
             <div class="swiper-button-prev video-review-prev"></div>
@@ -267,78 +200,21 @@ Template Name: Ретрит
         </div>
         <div class="previously__wrapper previously-slider swiper">
             <ul class="previously__list swiper-wrapper single-gallery">
-                <li class="swiper-slide">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
+                <?php
+                $photos = get_field('как_это_было_в_прошлый_раз_галерея');
 
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
-                        <picture>
-                            <!-- <source srcset="
-                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
-                        -->
-
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
-                                alt="мальдивы">
-                        </picture>
-                    </a>
-                </li>
+                if ($photos) {
+                    foreach ($photos as $photo) {
+                        echo '<li class="swiper-slide">';
+                            echo '<a href="'. esc_url($photo) .'">';
+                                echo '<img src="'. esc_url($photo) .'" alt="auto">';
+                            echo '</a>';
+                        echo '</li>';
+                    }
+                } else {
+                    echo 'No photos found2.';
+                }
+                ?>
             </ul>
             <div class="swiper-pagination previously__pagination"></div>
         </div>
