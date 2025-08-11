@@ -1948,3 +1948,14 @@ input.submit-btn:hover {
     flex-direction: column;
     }
 }
+
+.hero__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.hero__video-item video {
+    height: 600px;
+    width: 330px;
+}
