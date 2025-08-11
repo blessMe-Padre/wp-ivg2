@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     const navBtn = document.querySelector('.nav-button');
-    const nav = document.querySelector('.nav');
+    const nav = document.querySelector('.nav--mobile');
     const body = document.querySelector('body');
     const gallery = document.querySelector('.gallery');
     const singleGallery = document.querySelector('.single-gallery');
