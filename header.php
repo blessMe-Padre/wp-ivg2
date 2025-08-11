@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-    <?php
+        <?php
 			if(is_404()) {
 				echo 'Ошибка 404';
 			}
@@ -42,13 +42,22 @@
             <div class="container">
                 <button class="btn nav-button" aria-label="Меню"></button>
                 <nav class="nav">
-                <?php wp_nav_menu([
-					'theme_location' => 'top',
-					'container' => '',
-					'menu_class' => '',
-					'menu_id' => ''
-				]);
-				?>
+                    <?php wp_nav_menu([
+                        'theme_location' => 'top',
+                        'container' => '',
+                        'menu_class' => '',
+                        'menu_id' => ''
+                    ]);
+                    ?>
+                </nav>
+                <nav class="nav nav--mobile">
+                    <?php wp_nav_menu([
+                        'theme_location' => 'mobile',
+                        'container' => '',
+                        'menu_class' => '',
+                        'menu_id' => ''
+                    ]);
+                    ?>
                 </nav>
             </div>
         </header>
