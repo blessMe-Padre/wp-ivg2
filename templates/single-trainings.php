@@ -12,7 +12,7 @@ Template Post Type: post
             <?php the_post_thumbnail( '' );  ?>
             <?php the_content(); ?>
 
-            <div>
+            <div class="mt-30">
                 <h2 class="title-center">Как проходит тренинг</h2>
 
                 <ul class="training_list">

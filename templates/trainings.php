@@ -54,10 +54,6 @@ Template Name: Тренинги
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail( '' );  ?>
                                 <h3><?php the_title(); ?></h3>
-                                <p class="training__when">
-                                    Ближайший тренинг: <time
-                                        datetime="<?= CFS()->get('training_when_robots') ?>"><?= CFS()->get('training_when') ?></time>
-                                </p>
                                 <p class="training__description"><?= CFS()->get('training__descriptions') ?></p>
                             </a>
                         </li>
